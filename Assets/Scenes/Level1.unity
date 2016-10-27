@@ -201,6 +201,23 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000010308210832, guid: 97057899ce89c0b42ba8ac5224ed0e59,
     type: 2}
   m_PrefabInternal: {fileID: 1195039388}
+--- !u!114 &5468677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5468676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfae226108283d94b94d0ec9c81b6ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointDistance: 3
+  stabiliseFactor: 0.5
+  correctionForce: 50
+  throwForce: 40
+  Held: 0
+  heldObject: {fileID: 0}
 --- !u!114 &5468681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SwitchGravMsg: SwitchGrav
   LockPosMsg: LockPos
-  GunAni: {fileID: 1453167078}
+  GunAnim: {fileID: 0}
 --- !u!1001 &39360376
 Prefab:
   m_ObjectHideFlags: 0
