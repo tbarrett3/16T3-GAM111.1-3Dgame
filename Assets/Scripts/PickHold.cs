@@ -12,13 +12,16 @@ public class PickHold : MonoBehaviour {
 	void Update () {
         //if E button is clicked
         //send raycast infront of player
-        //if object is hit is marked as carryable 
+        //if object hit is marked as carryable 
         //and if in range
         //move object to player hands (empty gameobject)
-        //turn off rigidbody and make child
+        //make child
 
         //if E is pressed again release object 
-            //release child
-            //turn on rigidbody, put is state that is was before picking up
-	}
+        //release child
+
+
+
+        //http://answers.unity3d.com/questions/27654/pick-up-and-drop-rigidbody.html
+    }
 }
