@@ -6,6 +6,8 @@ public class PlayerGun : MonoBehaviour {
     public string SwitchGravMsg = "SwitchGrav";
     public string LockPosMsg = "LockPos";
 
+    public Animator GunAnim; //Set in editor
+
 	// Use this for initialization
 	void Start () {
 	
@@ -17,6 +19,7 @@ public class PlayerGun : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {//Left Click
             SwitchGravShot();
+            // GunAnim.SetTrigger(RecoilNow);
         }
 
         if (Input.GetMouseButtonDown(1))
