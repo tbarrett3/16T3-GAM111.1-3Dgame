@@ -8,24 +8,29 @@ public class PlayerGun : MonoBehaviour {
 
     public Animator GunAnim; //Set in editor
 
+    public static bool useGun = true;
+
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if(useGun == true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {//Left Click
+                SwitchGravShot();
+                // GunAnim.SetTrigger(RecoilNow);
+            }
 
-        if (Input.GetMouseButtonDown(0))
-        {//Left Click
-            SwitchGravShot();
-            // GunAnim.SetTrigger(RecoilNow);
+            if (Input.GetMouseButtonDown(1))
+            {//Right Click
+                LockPosShot();
+            }
         }
 
-        if (Input.GetMouseButtonDown(1))
-        {//Right Click
-            LockPosShot();
-        }
     }
     
     public void SwitchGravShot()
