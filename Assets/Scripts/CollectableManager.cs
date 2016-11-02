@@ -7,10 +7,11 @@ public class CollectableManager : MonoBehaviour {
 
     public List<GameObject> Collectables = new List<GameObject>();
     public Text CollectText;
-    private int currentCollect = 0;
+    private int currentCollect;
 
 	// Use this for initialization
 	void Start () {
+        currentCollect = 0;
         Collectables.AddRange(GameObject.FindGameObjectsWithTag("Collect"));
         UpdateUI();
 	}
@@ -30,7 +31,16 @@ public class CollectableManager : MonoBehaviour {
 
     public void UpdateUI()
     {
-        CollectText.text = "Int / " + Collectables.Capacity;
+        CollectText.text = currentCollect + " / " + Collectables.Capacity;
     }
 
+    void OnTriggerEnter (Collider other)
+    {
+        if (other.gameObject.CompareTag("Collect"))
+        {
+            other.gameObject.SetActive(false);
+            currentCollect = currentCollect + 1;
+            UpdateUI();
+        }
+    }
 }
