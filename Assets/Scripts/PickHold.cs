@@ -4,8 +4,8 @@ using System.Collections;
 public class PickHold : MonoBehaviour
 {
 
-    public float pointDistance = 1.6f;
-    public float correctionForce = 60f;
+    public float pointDistance = 2.1f;
+    public float correctionForce = 80f;
     public float throwForce = 1.5f;
     public float grabDistance = 5f;
 

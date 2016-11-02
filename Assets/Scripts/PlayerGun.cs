@@ -6,12 +6,12 @@ public class PlayerGun : MonoBehaviour {
     public string SwitchGravMsg = "SwitchGrav";
     public string LockPosMsg = "LockPos";
 
-    public Animator GunAnim; //Set in editor
-
     public static bool useGun = true;
 
-	// Use this for initialization
-	void Start () {
+    public Animator GunAnim; //Set in editor
+
+    // Use this for initialization
+    void Start () {
 
 	}
 	
@@ -19,10 +19,10 @@ public class PlayerGun : MonoBehaviour {
 	void Update () {
         if(useGun == true)
         {
+            
             if (Input.GetMouseButtonDown(0))
             {//Left Click
                 SwitchGravShot();
-                // GunAnim.SetTrigger(RecoilNow);
             }
 
             if (Input.GetMouseButtonDown(1))
@@ -36,6 +36,7 @@ public class PlayerGun : MonoBehaviour {
     public void SwitchGravShot()
     {
         Debug.Log("Grav Click");
+        GunAnim.SetTrigger("RecoilNow");
         RaycastHit hit = new RaycastHit();
         var ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         if (Physics.Raycast(ray, out hit))
@@ -50,6 +51,7 @@ public class PlayerGun : MonoBehaviour {
     public void LockPosShot()
     {
         Debug.Log("Lock Position Click");
+        GunAnim.SetTrigger("RecoilNow");
         RaycastHit hit = new RaycastHit();
         var ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         if (Physics.Raycast(ray, out hit))

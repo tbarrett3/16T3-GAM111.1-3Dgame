@@ -6,12 +6,12 @@ public class SceneLoader : MonoBehaviour {
 
     public void RestartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 	public void RunLevel1()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
