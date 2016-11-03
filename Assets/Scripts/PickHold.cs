@@ -9,8 +9,8 @@ public class PickHold : MonoBehaviour
     public float throwForce = 1.5f;
     public float grabDistance = 5f;
 
-    public bool Held = false;
-    public Transform heldObject;
+    public static bool Held = false;
+    public static Transform heldObject;
 
     // Use this for initialization
     void Start()

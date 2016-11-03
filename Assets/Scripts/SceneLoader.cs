@@ -9,10 +9,22 @@ public class SceneLoader : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-	public void RunLevel1()
+	public void RunLevel0()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void MainMenu()
     {
         SceneManager.LoadScene(0);
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+
 
     public void QuitGame()
     {
