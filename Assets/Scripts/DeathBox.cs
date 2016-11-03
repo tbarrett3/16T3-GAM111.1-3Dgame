@@ -12,4 +12,9 @@ public class DeathBox : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void OnTriggerEnter ()
+    {
+
+    }
 }
