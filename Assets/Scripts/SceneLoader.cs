@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour {
 
 	public void RunLevel0()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
     }
 
     public void MainMenu()
@@ -24,7 +24,20 @@ public class SceneLoader : MonoBehaviour {
         SceneManager.LoadScene(1);
     }
 
+    public void Controls()
+    {
+        SceneManager.LoadScene(2);
+    }
 
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void RunLevel2()
+    {
+        SceneManager.LoadScene(5);
+    }
 
     public void QuitGame()
     {
