@@ -9,6 +9,11 @@ public class CollectableManager : MonoBehaviour {
     public Text CollectText;
     private int currentCollect;
 
+    void Awake ()
+    {
+        Collectables.Clear();
+    }
+
 	// Use this for initialization
 	void Start () {
         currentCollect = 0;
@@ -31,7 +36,7 @@ public class CollectableManager : MonoBehaviour {
 
     public void UpdateUI()
     {
-        CollectText.text = currentCollect + " / " + Collectables.Capacity;
+        CollectText.text = currentCollect + " / " + Collectables.Count;
     }
 
     void OnTriggerEnter (Collider other)

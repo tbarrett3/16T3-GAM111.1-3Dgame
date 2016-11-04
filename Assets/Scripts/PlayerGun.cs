@@ -12,7 +12,7 @@ public class PlayerGun : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+        useGun = true;
 	}
 	
 	// Update is called once per frame
